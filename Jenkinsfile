@@ -9,13 +9,13 @@ pipeline {
     stage("Build"){
       steps {
         sh "chmod +x ./scripts/alpine.sh && ./scripts/alpine.sh"
-        sh  "chmod +x ./scripts/dropdb.sh"
-        sh  "npm install"
+        sh "chmod +x ./scripts/dropdb.sh"
+        sh "npm install"
       }
     }
     stage("Test") {
       steps {
-        sh  "npm run test:ci"
+        sh "npm run test:ci"
       }
     }
   }
